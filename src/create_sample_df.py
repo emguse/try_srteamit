@@ -40,6 +40,7 @@ print(df.head())
 os.makedirs("./data/dst/", exist_ok=True)
 df.to_csv("data/dst/sample_wave.csv")
 
+df.drop("Datetime", axis=1, inplace=True)
 # plot, save png
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
